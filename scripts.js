@@ -40,10 +40,6 @@ function displayWeather(object) {
     const img = document.createElement('img');
     img.src = `https://openweathermap.org/img/w/${object.weather[0].icon}.png`;
     document.getElementById("weather-icon").appendChild(img);
-    document.getElementById("weather-temp").textContent = `${object.main.temp}\u00B0`
+    document.getElementById("weather-temp").textContent = `${object.main.temp}\u00B0 | Feels Like: ${object.main.feels_like}\u00B0`
     document.getElementById("weather-description").textContent = `${object.weather[0].description}`
 }
-
-//desc: weather[0].description
-//icons: weather[0].icon
-//temp: main.temp
